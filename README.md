@@ -44,3 +44,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
     * Search by username
 - Implement Click on Tag
 - Implement View other Profiles
+
+## Deployment through Github Pages
+
