@@ -2,20 +2,20 @@ import Prompt from '@models/prompt'
 import { connectToDB } from "@utils/database"
 
 
-export const generateStaticParams = async () => {
-    try {
-      await connectToDB();
+// export const generateStaticParams = async () => {
+//     try {
+//       await connectToDB();
   
-      // Fetch all prompt IDs from the database
-      const prompts = await Prompt.find({}, '_id');
-      const paths = prompts.map(prompt => ({ params: { id: prompt._id.toString() } }));
+//       // Fetch all prompt IDs from the database
+//       const prompts = await Prompt.find({}, '_id');
+//       const paths = prompts.map(prompt => ({ params: { id: prompt._id.toString() } }));
   
-      return paths;
-    } catch (error) {
-      console.error("Error generating static paths:", error);
-      return [];
-    }
-  };
+//       return paths;
+//     } catch (error) {
+//       console.error("Error generating static paths:", error);
+//       return [];
+//     }
+//   };
 
 // GET (read)
 
