@@ -51,6 +51,13 @@ const handler = NextAuth({
                 return false
             }
         },
+    },
+     // Define generateStaticParams function
+     generateStaticParams: async () => {
+        // Return any static parameters used by NextAuth
+        return {
+            // Add any necessary static parameters here
+        }
     }
 
 })
