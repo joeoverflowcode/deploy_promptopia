@@ -79,6 +79,9 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
+      - name: Set up Environment Variables
+          env:
+            MONGODB_URI: ${{ secrets.MONGODB_URI }}
 
   # Deployment job
   deploy:
