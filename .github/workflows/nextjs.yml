@@ -79,6 +79,14 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
+      - name: Set up Environment Variables
+        run: |
+            echo "GOOGLE_ID=${{ secrets.GOOGLE_ID }}" >> $GITHUB_ENV
+            echo "GOOGLE_CLIENT_SECRET=${{ secrets.GOOGLE_CLIENT_SECRET }}" >> $GITHUB_ENV
+            echo "MONGODB_URI=${{ secrets.MONGODB_URI }}" >> $GITHUB_ENV
+            echo "NEXTAUTH_URL=${{ secrets.NEXTAUTH_URL }}" >> $GITHUB_ENV
+            echo "NEXTAUTH_URL_INTERNAL=${{ secrets.NEXTAUTH_URL_INTERNAL }}" >> $GITHUB_ENV
+            echo "NEXTAUTH_SECRET=${{ secrets.NEXTAUTH_SECRET }}" >> $GITHUB_ENV
 
   # Deployment job
   deploy:
