@@ -80,8 +80,9 @@ jobs:
         with:
           path: ./out
       - name: Set up Environment Variables
-          env:
-            MONGODB_URI: ${{ secrets.MONGODB_URI }}
+        env:
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
+
 
   # Deployment job
   deploy:
